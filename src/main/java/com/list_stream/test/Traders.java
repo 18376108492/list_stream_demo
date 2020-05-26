@@ -8,11 +8,31 @@ public class Traders {
     private String name;//姓名
     private String address;//地址
     private Integer  turnover;//交易额
+    private Integer year;//年限
 
-    public Traders(String name, String address, Integer turnover) {
+    public Traders(String name, String address, Integer turnover, Integer year) {
         this.name = name;
         this.address = address;
         this.turnover = turnover;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Traders{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", turnover=" + turnover +
+                ", year=" + year +
+                '}';
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public String getName() {
@@ -37,15 +57,6 @@ public class Traders {
 
     public void setTurnover(Integer turnover) {
         this.turnover = turnover;
-    }
-
-    @Override
-    public String toString() {
-        return "Traders{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", turnover=" + turnover +
-                '}';
     }
 
 
